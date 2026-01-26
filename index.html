@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SK CREATION | Home</title>
+  
+  <!-- SEO Meta Tags add here -->
+  <meta name="description" content="...">
+  <meta name="keywords" content="...">
+  <meta name="author" content="SK CREATION">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>SK Creation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+ <nav class="navbar">
+<div id="overlay" onclick="closeMenu()"></div>
+
+  <div class="logo">SK</div>
+
+  <div class="menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="designs.html">Designs</a>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
+  </div>
+
+</nav>
+
+  <!-- HERO SECTION -->
+
+   <section class="hero">
+    <h1 class="title glow-text">SK CREATION</h1>
+    <p class="hero-tagline">Excellence of Quality Work</p>
+    <a href="designs.html" class="hero-btn">View Our Designs</a>
+  </section>
+
+<section class="about">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>
+      SK Creation is a premium designer & contractor company specializing in</p>
+      exhibition stalls, interior setups, lighting and creative booth designs.
+      <p>We focus on quality, innovation and client satisfaction.</p>
+    </p>
+    <p>
+  Contact: <strong>+91 XXXXXXXX</strong><br>
+  Instagram: 
+  <a href="https://www.instagram.com/imsxurxbh?igsh=MTV5cTdnaWFvaHJ1eg==" target="_blank" class="gold-link">
+    @imsxurxbh
+  </a>
+</p>
+  </div>
+</section>
+
+<section class="why-section">
+  <h2>Why Choose Us</h2>
+
+  <div class="why-cards">
+    <div class="why-card">
+      <span>Q</span>
+      <h3>Quality</h3>
+      <p>Top-grade materials.</p>
+    </div>
+
+    <div class="why-card">
+      <span>D</span>
+      <h3>Modern</h3>
+      <p>Tailored aesthetics.</p>
+    </div>
+
+    <div class="why-card">
+      <span>T</span>
+      <h3>On-Time</h3>
+      <p>Reliable timelines.</p>
+    </div>
+  </div>
+</section>
+<section class="items-section">
+  <h2>Our Special Items</h2>
+
+  <div class="items-grid">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item wide">Item 5</div>
+    <div class="item wide">Item 6</div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+  <h2 class="contact-title reveal">Contact Us</h2>
+<div class="container">
+
+<form id="contactForm">
+<div class="field">
+  <input type="text" name="name" placeholder=" " required>
+  <label>Name</label>
+</div>
+
+<div class="field">
+  <input type="email" name="email" placeholder=" " required>
+  <label>Email</label>
+</div>
+
+<div class="field">
+  <input type="tel" name="phone" placeholder=" " required>
+  <label>Phone No</label>
+</div>
+
+<div class="field">
+  <textarea name="message" placeholder=" " required></textarea>
+  <label>Message</label>
+</div>
+
+<button type="submit">SEND</button>
+<p id="formStatus"></p>
+
+  <p id="formStatus"></p>
+</form>
+
+</section>
+<script src="script.js"></script>
+<!-- Footer Start -->
+<footer>
+  <p>&copy; 2026 SK CREATION. All rights reserved.</p>
+  <div class="social-links">
+    <a href="#">Facebook</a> |
+    <a href="#">Instagram</a> |
+    <a href="#">LinkedIn</a>
+  </div>
+</footer>
+<!-- Footer End -->
+<script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll('.reveal');
+
+    reveals.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const visiblePoint = 100;
+
+      if (elementTop < windowHeight - visiblePoint) {
+        el.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+</script>
+
+</body>
+</html>
+
