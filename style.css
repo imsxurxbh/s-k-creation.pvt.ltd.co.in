@@ -769,3 +769,19 @@ h2 {
     display: block;
   }
 }
+
+/* ===== MENU LINK STYLE FIX ===== */
+.menu a {
+  color: #ffffff !important;          /* font white */
+  border: 2px solid #ff4da6;           /* pink border */
+  padding: 6px 14px;                   /* border size control */
+  border-radius: 6px;                  /* smooth look */
+  font-size: 15px;
+  background: transparent;
+}
+
+/* hover effect (optional but classy) */
+.menu a:hover {
+  background: #ff4da6;
+  color: #fff;
+}
