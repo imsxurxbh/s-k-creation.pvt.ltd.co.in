@@ -704,4 +704,25 @@ h2 {
   color: #fff;
   cursor: pointer;
 }
+/* ============ DESKTOP VIEW FIX ============ */
+@media (min-width: 769px) {
 
+  .menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    background: transparent;
+    right: auto;
+    padding: 0;
+  }
+
+  #overlay {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
