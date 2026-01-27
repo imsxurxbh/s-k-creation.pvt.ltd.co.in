@@ -744,7 +744,7 @@ h2 {
     right: -260px;
     width: 260px;
     height: calc(100vh - 80px);
-    background: #111;
+    background: pink;
     flex-direction: column;
     padding: 30px;
     transition: 0.3s ease;
