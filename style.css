@@ -32,12 +32,12 @@ nav a:hover{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
   gap:30px;
-  scroll-margin-top: 90px;
+  margin-top: 50px;
 }
 
 .card{
   background:#111;
-  padding:30px;
+  padding:20px;
   border-radius:15px;
   transition:0.3s;
 }
@@ -61,12 +61,12 @@ nav a:hover{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
   gap:30px;
-  scroll-margin-top:90px;
+  margin-top:50px;
 }
 
 .design-card{
   background:#111;
-  padding:30px;
+  padding:15px;
   border-radius:15px;
   transition:0.3s;
 }
@@ -95,7 +95,7 @@ nav a:hover{
 .contact-title{
   font-size:36px;
   color:gold;
-  margin-bottom:50px;
+  margin-bottom:30px;
 }
 
 .contact-section form{
@@ -215,7 +215,51 @@ nav {
 nav a {
   font-size: 18px;
 }
+/* --- Navbar and Hamburger Menu --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff; /* change color if needed */
+  position: relative;
+}
 
+.menu a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.hamburger {
+  display: none; /* hide on desktop */
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none; /* hide menu by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* navbar height */
+    right: 0;
+    background-color: #fff;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  .menu a {
+    margin: 10px;
+    padding: 10px;
+    display: block;
+  }
+
+  .hamburger {
+    display: block; /* show hamburger on mobile */
+  }
+}
 .design-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -402,12 +446,12 @@ footer a {
   display: flex;
   justify-content: space-between; /* logo left, menu right */
   align-items: center;
-  padding: 0 40px;
+  padding: 0 20px;
   position: fixed; /* agar tumhara header fixed hai */
   width: 100%;
   top: 0;
   z-index: 1000;
-  background-color: #ffb6c1; /* ya jo bhi background ho */
+  background-color: pink; /* ya jo bhi background ho */
 }
 
 .navbar .logo {
@@ -511,7 +555,7 @@ section p {
   text-decoration: underline;
 }
 .about strong {
-  color: #d4af37;
+  color: #efca13;
 }
 /* COMMON */
 section {
@@ -612,188 +656,118 @@ h2 {
   transform: scale(1.05);
   box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
 }
-/* ================= OVERLAY ================= */
-#overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  z-index: 998;
-}
-
-/* ================= MENU ================= */
+/* पहले मेनू को सही से सेट करें */
 .menu {
-  position: fixed;
-  top: 80px;
-  right: -100%;
-  width: 240px;
-  height: calc(100vh - 80px);
-  background: #111;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  padding: 30px 20px;
-  transition: 0.4s ease;
-  z-index: 999;
-}
-
-/* ACTIVE STATE */
-.menu.active {
-  right: 0;
-}
-
-#overlay.active {
-  display: block;
-}
-
-/* MENU LINKS */
-.menu a {
-  color: #fff;
-  font-size: 18px;
-  text-decoration: none;
-}
-
-/* HAMBURGER */
-.hamburger {
-  font-size: 28px;
-  color: #fff;
-  cursor: pointer;
-}
-/* ============ DESKTOP VIEW FIX ============ */
-@media (min-width: 769px) {
-
-  .menu {
-    position: static;
+    position: relative;
     display: flex;
-    flex-direction: row;
-    height: auto;
-    width: auto;
-    background: transparent;
-    right: auto;
-    padding: 0;
-  }
-
-  #overlay {
-    display: none !important;
-  }
-
-  .hamburger {
-    display: none;
-  }
+    align-items: center;
 }
 
-/* ================= NAVBAR BASE ================= */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 40px;
-  background: #ffb6c1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  z-index: 1000;
-}
-
-.logo {
-  color: #fff;
-  font-size: 26px;
-  font-weight: bold;
-}
-
-/* DESKTOP MENU */
-.menu {
-  display: flex;
-  gap: 25px;
-}
-
+/* लिंक की स्टाइलिंग */
 .menu a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
+    color: rgb(73, 8, 226);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: inline-block;
 }
 
-/* HAMBURGER DEFAULT */
-.hamburger {
-  display: none;
-  font-size: 30px;
-  color: #fff;
-  cursor: pointer;
+/* मूविंग लाइन (Underline) की स्टाइलिंग */
+.animation {
+    position: absolute;
+    bottom: 0; 
+    height: 3px;
+    background: #00ffcc; /* चमकता हुआ रंग */
+    border-radius: 8px;
+    transition: all 0.4s ease; /* सरकने की रफ़्तार */
 }
 
-/* OVERLAY */
-#overlay {
-  display: none;
+/* --- यहाँ से लाइन की मूवमेंट कंट्रोल होगी --- */
+
+/* जब Home पर माउस हो */
+.menu a:nth-child(1):hover ~ .animation {
+    width: 85px;
+    left: 10px;
 }
 
-/* ================= MOBILE VIEW ================= */
-@media (max-width: 768px) {
-
-  .hamburger {
-    display: block;
-  }
-
-  .menu {
-    position: fixed;
-    top: 80px;
-    right: -260px;
-    width: 260px;
-    height: calc(100vh - 80px);
-    background: pink;
-    flex-direction: column;
-    padding: 30px;
-    transition: 0.3s ease;
-  }
-
-  .menu.active {
-    right: 0;
-  }
-
-  #overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0,0,0,0.6);
-    z-index: 999;
-  }
-
-  #overlay.active {
-    display: block;
-  }
+/* जब Faculty पर माउस हो */
+.menu a:nth-child(2):hover ~ .animation {
+    width: 85px;
+    left: 146px;
 }
 
-/* ===== MENU LINK STYLE FIX ===== */
-.menu a {
-  color: #ffffff !important;          /* font white */
-  border: 2px solid #ff4da6;           /* pink border */
-  padding: 6px 14px;                   /* border size control */
-  border-radius: 6px;                  /* smooth look */
-  font-size: 15px;
-  background: transparent;
+/* जब Designs पर माउस हो */
+.menu a:nth-child(3):hover ~ .animation {
+    width: 85px;
+    left: 286px;
 }
 
-/* hover effect (optional but classy) */
-.menu a:hover {
-  background: #ff4da6;
-  color: #fff;
+/* 1. पूरी वेबसाइट का बैकग्राउंड और टेक्स्ट कलर */
+body { 
+    font-family: 'Poppins', sans-serif; 
+    margin: 0; 
+    background-color: #0f0f0f; /* गहरा काला बैकग्राउंड */
+    color: #ffffff; /* डिफॉल्ट टेक्स्ट सफ़ेद */
 }
 
+/* 2. सभी मुख्य हेडिंग्स (Main Headings) - पीला रंग */
+h1, h2, h3 {
+    color: #ffcc00; /* प्रोफेशनल गोल्डन येलो */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
+/* 3. पैराग्राफ और टैगलाइन - सफ़ेद रंग */
+p {
+    color: #ffffff; 
+    line-height: 1.6;
+    font-size: 17px;
+}
 
+/* 4. सेक्शन्स की सेटिंग (ताकि सब अलग-अलग दिखें) */
+section {
+    padding: 60px 20px;
+    border-bottom: 1px solid #333; /* हर सेक्शन के बीच एक हल्की लाइन */
+}
 
+/* 5. हीरो सेक्शन (सबसे ऊपर वाला हिस्सा) */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('your-image.jpg');
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
+.hero h1 {
+    font-size: 45px;
+    color: #ffcc00; /* हीरो वाली हेडिंग भी पीली */
+    text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.3);
+}
 
+/* 6. सर्विस बॉक्स (कार्ड्स का लुक) */
+.service-box {
+    background: #1a1a1a; /* हल्का ग्रे-काला रंग ताकि बॉक्स अलग दिखे */
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #ffcc00; /* बॉक्स का बॉर्डर पीला */
+    margin: 15px;
+    transition: 0.3s;
+}
 
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.2);
+}
 
-
-
-
-
+/* 7. बटन की स्टाइलिंग */
+.btn {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    display: inline-block;
+}
